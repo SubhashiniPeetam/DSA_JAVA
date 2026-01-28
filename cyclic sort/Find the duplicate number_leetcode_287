@@ -1,1 +1,31 @@
-
+class Solution {
+    public void swap(int[] arr,int i,int correct_index)
+    {
+        int temp=arr[i];
+        arr[i]=arr[correct_index];
+        arr[correct_index]=temp;
+    }
+    public int findDuplicate(int[] arr) {
+        int i=0;
+        while(i<arr.length)
+        {
+            int correct_index=arr[i];
+            if(arr[i]!=arr[correct_index])
+            {
+                swap(arr,i,correct_index);
+            }
+            else
+            {
+                i++;
+            }
+        }
+        for(i=0;i<arr.length;i++)
+        {
+            if(arr[i]!=i+1)
+            {
+                return arr[i];
+            }
+        }
+        return -1;
+    }
+}
