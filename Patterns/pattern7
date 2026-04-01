@@ -1,0 +1,47 @@
+/*  A A A A
+    B B B B
+    C C C C
+    D D D D  */
+
+import java.util.Scanner;
+
+public class pattern7 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter n:");
+        int n = sc.nextInt();
+
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                System.out.print((char)(i+64)+" ");
+            }
+            System.out.println();
+        }
+
+        sc.close();
+
+    }
+}
+
+output:
+Enter n:5
+A A A A A 
+B B B B B
+C C C C C
+D D D D D
+E E E E E
+
+Enter n:11
+A A A A A A A A A A A 
+B B B B B B B B B B B
+C C C C C C C C C C C
+D D D D D D D D D D D
+E E E E E E E E E E E
+F F F F F F F F F F F
+G G G G G G G G G G G
+H H H H H H H H H H H
+I I I I I I I I I I I
+J J J J J J J J J J J
+K K K K K K K K K K K
