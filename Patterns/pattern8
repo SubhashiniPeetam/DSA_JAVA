@@ -1,0 +1,48 @@
+/*    a a a a
+      B B B B
+      c c c c
+      D D D D   */
+
+import java.util.Scanner;
+
+public class pattern8 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter n:");
+        int n = sc.nextInt();
+
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                if(i%2!=0)
+                {
+                    System.out.print((char)(i+96)+" ");
+                }
+                else{
+                    System.out.print((char)(i+64)+" ");
+                }
+            }
+            System.out.println();
+        }
+        sc.close();
+
+    }
+}
+
+output:
+Enter n:4
+a a a a 
+B B B B
+c c c c
+D D D D
+
+Enter n:8
+a a a a a a a a 
+B B B B B B B B
+c c c c c c c c
+D D D D D D D D
+e e e e e e e e
+F F F F F F F F
+g g g g g g g g
+H H H H H H H H
