@@ -1,0 +1,21 @@
+class Solution {
+    
+    static void swap(int[] arr,int st,int end)
+    {
+        while(st<end)
+        {
+            int temp=arr[st];
+            arr[st]=arr[end];
+            arr[end]=temp;
+            st++;
+            end--;
+        }
+    }
+    static void rotateArr(int arr[], int d) {
+        // code here
+        swap(arr,0,d%arr.length-1);
+        swap(arr,d%arr.length,arr.length-1);
+        swap(arr,0,arr.length-1);
+        
+    }
+}
