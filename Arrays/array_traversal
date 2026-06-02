@@ -1,0 +1,9 @@
+class Solution {
+    public static void arrayTraversal(int[] arr) {
+        // Code here
+        for(int ele:arr)
+        {
+            System.out.print(ele+" ");
+        }
+    }
+}
