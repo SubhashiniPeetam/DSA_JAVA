@@ -1,1 +1,40 @@
+//https://leetcode.com/problems/missing-number/description/
+class Solution {
+
+    public void swap(int[] arr,int i,int idx)
+    {
+        int temp = arr[i];
+        arr[i] = arr[idx];
+        arr[idx] = temp;
+    }
+
+    public int missingNum(int[] arr)
+    {
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]!=i)
+            {
+                return i;
+            }
+        }
+        return arr.length;
+    }
+    
+    public int missingNumber(int[] arr) {
+        int i=0, n = arr.length;
+        while(i<n)
+        {
+            if(arr[i]==i | arr[i]>=arr.length)
+            {
+                i++;
+            }
+            else {
+                int idx = arr[i];
+                swap(arr,i,idx);
+            }
+        }
+
+        return missingNum(arr);
+    }
+}
 
